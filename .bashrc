@@ -10,11 +10,12 @@ export PS1="${RED}[\h] ${LBLUE}\W\n${GREEN}=>${RESET} "
 export PS2="${YELLOW}>${RESET}"
 
 #ls colors
-alias ls="ls -F"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-        echo "linux"
+        alias ls="ls --color -F"
+        export LS_COLORS="di=0;33:"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+	alias ls="ls -F"
 	export CLICOLOR=1
 	export LSCOLORS=dxFxCxDxBxegedabagaced
 fi
