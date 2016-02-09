@@ -9,13 +9,13 @@ RESET="\[$(tput sgr0)\]"
 export PS1="${RED}[\h] ${LBLUE}\W\n${GREEN}=>${RESET} "
 export PS2="${YELLOW}>${RESET}"
 
-#directory colors
+#ls colors
 alias ls="ls -F"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
         echo "linux"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-        export CLICOLOR=1
+	export CLICOLOR=1
 	export LSCOLORS=dxFxCxDxBxegedabagaced
 fi
 
